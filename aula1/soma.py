@@ -1,3 +1,4 @@
+# lê dois números do teclado e soma eles
 # f(x, y) = x + y
 def somar(x, y):
     return x + y

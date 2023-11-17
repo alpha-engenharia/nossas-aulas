@@ -1,3 +1,4 @@
+# versão com uso de função
 def cumprimentar(pessoa):
     print("Olá, " + pessoa)
 

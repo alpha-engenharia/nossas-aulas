@@ -1,3 +1,4 @@
+# lê dois números do teclado, multiplica e soma eles usando funções
 def somar(x, y): return x + y
 def multiplicar(x, y): return x * y
 
