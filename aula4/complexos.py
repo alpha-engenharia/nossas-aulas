@@ -39,3 +39,29 @@ def subtrair(z1, z2):
 def dividir(z1, z2):
     z = multiplicar(z1, conjugado(z2))
     return  [re(z)/modulo(z2)**2, im(z)/modulo(z2)**2]
+
+def polar(z, usa_grau=False):
+    if usa_grau:
+        return [modulo(z), grau(z)]
+    else:
+        return [modulo(z), rad(z)]
+    
+def retangular(p, usa_grau=False):
+    from math import sin, cos, pi
+    r = p[0]
+    th = p[1]
+
+    if usa_grau:
+        return [r*cos(pi*th/180), r*sin(pi*th/180)]
+    else:
+        return [r*cos(th), r*sin(th)]
+    
+def potencia(z, n):
+    from math import cos, sin
+    p = polar(z)
+    r = p[0]
+    th = p[1]
+    return [(r**n)*cos(n*th), (r**n)*sin(n*th)]
+
+def raiz(z, n):
+    return potencia(z, 1/n)
